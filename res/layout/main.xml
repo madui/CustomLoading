@@ -5,13 +5,14 @@
     android:orientation="horizontal" >
 
     <ProgressBar
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:indeterminateDrawable="@drawable/frame_loading" />
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:indeterminateDuration="2000"
         android:indeterminateDrawable="@drawable/rotate_loading" />
 
 </LinearLayout>

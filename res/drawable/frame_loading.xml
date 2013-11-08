@@ -44,5 +44,35 @@
             android:drawable="@drawable/loading_07"
             android:gravity="left" />
     </item>
+    <item android:duration="150">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_08"
+            android:gravity="left" />
+    </item>
+    <item android:duration="150">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_09"
+            android:gravity="left" />
+    </item>
+    <item android:duration="150">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_10"
+            android:gravity="left" />
+    </item>
+    <item android:duration="150">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_11"
+            android:gravity="left" />
+    </item>
+    <item android:duration="150">
+        <clip
+            android:clipOrientation="horizontal"
+            android:drawable="@drawable/loading_12"
+            android:gravity="left" />
+    </item>
 
 </animation-list>
