@@ -14,5 +14,9 @@
         android:layout_height="wrap_content"
         android:indeterminateDuration="2000"
         android:indeterminateDrawable="@drawable/rotate_loading" />
+    
+    <com.storm.ui.CustomClipLoading
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
