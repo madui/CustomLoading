@@ -3,7 +3,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/loading_bg"
     android:gravity="center"
     android:orientation="vertical" >
 
@@ -11,9 +10,10 @@
         android:id="@+id/iv_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="3dp"
+        android:paddingTop="3dp"
         android:layout_gravity="center"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="2dp"
+        android:background="@drawable/loading_bg"
         android:scaleType="centerInside"
         android:src="@drawable/clip_loading" />
 
