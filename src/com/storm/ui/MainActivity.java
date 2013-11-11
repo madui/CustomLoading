@@ -23,9 +23,33 @@ import com.storm.customloading.R;
 
 public class MainActivity extends Activity {
 
+	private ProgressWheel pwOne, pwTwo;
+	int progress = 0;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+
+		pwOne = (ProgressWheel) findViewById(R.id.progressBarOne);
+		pwTwo = (ProgressWheel) findViewById(R.id.progressBarTwo);
+
+		pwOne.spin();
+		Thread s = new Thread(r);
+		s.start();
 	}
+
+	final Runnable r = new Runnable() {
+		public void run() {
+			while (progress < 361) {
+				pwTwo.incrementProgress();
+				progress++;
+				try {
+					Thread.sleep(15);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	};
 }

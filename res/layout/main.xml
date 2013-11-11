@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
@@ -21,5 +22,33 @@
     <com.storm.ui.CustomClipLoading
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <com.storm.ui.ProgressWheel
+        android:id="@+id/progressBarOne"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        ProgressWheel:barColor="#222"
+        ProgressWheel:barLength="30dp"
+        ProgressWheel:barWidth="4dp"
+        ProgressWheel:delayMillis="75"
+        ProgressWheel:rimColor="#4000"
+        ProgressWheel:rimWidth="-1dp"
+        ProgressWheel:spinSpeed="30dp"
+        ProgressWheel:textColor="#222222"
+        ProgressWheel:textSize="14sp" />
+
+    <com.storm.ui.ProgressWheel
+        android:id="@+id/progressBarTwo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        ProgressWheel:barColor="#339BB9"
+        ProgressWheel:barLength="60dp"
+        ProgressWheel:barWidth="25dp"
+        ProgressWheel:rimColor="#44000000"
+        ProgressWheel:rimWidth="25dp"
+        ProgressWheel:spinSpeed="3dp"
+        ProgressWheel:text="Click\none of the\nbuttons"
+        ProgressWheel:textColor="#222222"
+        ProgressWheel:textSize="14sp" />
 
 </LinearLayout>
