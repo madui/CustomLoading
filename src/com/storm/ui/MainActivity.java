@@ -18,12 +18,16 @@ package com.storm.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 import com.storm.customloading.R;
 
 public class MainActivity extends Activity {
 
 	private ProgressWheel pwOne, pwTwo;
+	boolean running;
 	int progress = 0;
 
 	@Override
@@ -31,16 +35,28 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		pwOne = (ProgressWheel) findViewById(R.id.progressBarOne);
-		pwTwo = (ProgressWheel) findViewById(R.id.progressBarTwo);
-
+		pwOne = (ProgressWheel) findViewById(R.id.progress_bar_one);
+		pwTwo = (ProgressWheel) findViewById(R.id.progress_bar_two);
 		pwOne.spin();
 		Thread s = new Thread(r);
 		s.start();
+
+		Button startBtn = (Button) findViewById(R.id.btn_start);
+		startBtn.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				if (!running) {
+					progress = 0;
+					pwTwo.resetCount();
+					Thread s = new Thread(r);
+					s.start();
+				}
+			}
+		});
 	}
 
 	final Runnable r = new Runnable() {
 		public void run() {
+			running = true;
 			while (progress < 361) {
 				pwTwo.incrementProgress();
 				progress++;
@@ -50,6 +66,7 @@ public class MainActivity extends Activity {
 					e.printStackTrace();
 				}
 			}
+			running = false;
 		}
 	};
 }

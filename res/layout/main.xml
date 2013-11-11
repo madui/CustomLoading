@@ -9,13 +9,11 @@
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:indeterminateDrawable="@drawable/frame_loading" />
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:indeterminateDrawable="@drawable/rotate_loading"
         android:indeterminateDuration="1800" />
 
@@ -24,7 +22,7 @@
         android:layout_height="wrap_content" />
 
     <com.storm.ui.ProgressWheel
-        android:id="@+id/progressBarOne"
+        android:id="@+id/progress_bar_one"
         android:layout_width="50dp"
         android:layout_height="50dp"
         ProgressWheel:barColor="#222"
@@ -37,18 +35,32 @@
         ProgressWheel:textColor="#222222"
         ProgressWheel:textSize="14sp" />
 
-    <com.storm.ui.ProgressWheel
-        android:id="@+id/progressBarTwo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        ProgressWheel:barColor="#339BB9"
-        ProgressWheel:barLength="60dp"
-        ProgressWheel:barWidth="25dp"
-        ProgressWheel:rimColor="#44000000"
-        ProgressWheel:rimWidth="25dp"
-        ProgressWheel:spinSpeed="3dp"
-        ProgressWheel:text="Click\none of the\nbuttons"
-        ProgressWheel:textColor="#222222"
-        ProgressWheel:textSize="14sp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="start" />
+
+        <com.storm.ui.ProgressWheel
+            android:id="@+id/progress_bar_two"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            ProgressWheel:barColor="#339BB9"
+            ProgressWheel:barLength="60dp"
+            ProgressWheel:barWidth="25dp"
+            ProgressWheel:rimColor="#44000000"
+            ProgressWheel:rimWidth="25dp"
+            ProgressWheel:spinSpeed="3dp"
+            ProgressWheel:text="Click\none of the\nbuttons"
+            ProgressWheel:textColor="#222222"
+            ProgressWheel:textSize="14sp" />
+    </LinearLayout>
 
 </LinearLayout>
