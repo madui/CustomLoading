@@ -7,4 +7,5 @@
     android:background="@drawable/loading_bg"
     android:paddingLeft="3dp"
     android:paddingTop="3dp"
+    android:scaleType="centerInside"
     android:src="@drawable/clip_loading" />

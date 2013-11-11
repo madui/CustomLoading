@@ -85,7 +85,7 @@ public class CustomClipLoading extends FrameLayout {
 				}
 				mProgress += 100;
 				try {
-					Thread.sleep(15);
+					Thread.sleep(18);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
