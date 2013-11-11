@@ -3,19 +3,21 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:gravity="center"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:indeterminateDrawable="@drawable/frame_loading" />
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateDuration="1800"
-        android:indeterminateDrawable="@drawable/rotate_loading" />
-    
+        android:layout_marginBottom="20dp"
+        android:indeterminateDrawable="@drawable/rotate_loading"
+        android:indeterminateDuration="1800" />
+
     <com.storm.ui.CustomClipLoading
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
